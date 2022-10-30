@@ -19,7 +19,7 @@
 '**********************************************
 
 Class bizimhesap_efatura_plugin
-	Private PLUGIN_CODE, PLUGIN_DB_NAME, PLUGIN_NAME, PLUGIN_VERSION, PLUGIN_CREDITS, PLUGIN_GIT, PLUGIN_DEV_URL, PLUGIN_FILES_ROOT
+	Private PLUGIN_CODE, PLUGIN_DB_NAME, PLUGIN_NAME, PLUGIN_VERSION, PLUGIN_CREDITS, PLUGIN_GIT, PLUGIN_DEV_URL, PLUGIN_FILES_ROOT, PLUGIN_ICON, PLUGIN_REMOVABLE, PLUGIN_ROOT, PLUGIN_FOLDER_NAME
 
 	Private BIZIMHESAP_ACTIVE, BIZIM_API_KEY, BIZIM_FATURA_TIPI, BIZIM_FATURA_DATAPACK, BIZIM_API_BASE
 	Private PARAM_FATURA_ACIKLAMASI, SIPARIS_NO, SIPARIS_ID
@@ -87,9 +87,9 @@ Class bizimhesap_efatura_plugin
 		a=GetSettings(""&PLUGIN_CODE&"_REGISTERED", ""& Now() &"")
 		a=GetSettings(""&PLUGIN_CODE&"_CODENO", "830")
 		a=GetSettings(""&PLUGIN_CODE&"_ACTIVE", "1")
-		a=GetSettings(""&PLUGIN_CODE&"_API_KEY", "")
-		a=GetSettings(""&PLUGIN_CODE&"_FOLDER", "bizimhesap-efatura-plugin")
+		a=GetSettings(""&PLUGIN_CODE&"_FOLDER", PLUGIN_FOLDER_NAME)
 
+		a=GetSettings(""&PLUGIN_CODE&"_API_KEY", "")
 		' Register Settings
 		'------------------------------
 		DebugTimer ""& PLUGIN_CODE &" class_register() End"
@@ -229,6 +229,8 @@ Class bizimhesap_efatura_plugin
     	PLUGIN_CREDITS 			= "@badursun Anthony Burak DURSUN"
     	PLUGIN_GIT 				= "https://github.com/RabbitCMS-Hub/bizimhesap-efatura-plugin"
     	PLUGIN_DEV_URL 			= "https://adjans.com.tr"
+    	PLUGIN_ICON 			= "zmdi-pin-help"
+    	PLUGIN_REMOVABLE 		= True
     	PLUGIN_FILES_ROOT 		= PLUGIN_VIRTUAL_FOLDER(This)
     	'-------------------------------------------------------------------------------------
     	' PluginTemplate Main Variables
@@ -276,32 +278,21 @@ Class bizimhesap_efatura_plugin
 	'---------------------------------------------------------------
 	' Plugin Defines
 	'---------------------------------------------------------------
-	Public Property Get PluginCredits()
-		PluginCredits = PLUGIN_CREDITS
-	End Property
+	Public Property Get PluginCode() 		: PluginCode = PLUGIN_CODE 					: End Property
+	Public Property Get PluginName() 		: PluginName = PLUGIN_NAME 					: End Property
+	Public Property Get PluginVersion() 	: PluginVersion = PLUGIN_VERSION 			: End Property
+	Public Property Get PluginGit() 		: PluginGit = PLUGIN_GIT 					: End Property
+	Public Property Get PluginDevURL() 		: PluginDevURL = PLUGIN_DEV_URL 			: End Property
+	Public Property Get PluginFolder() 		: PluginFolder = PLUGIN_FILES_ROOT 			: End Property
+	Public Property Get PluginIcon() 		: PluginIcon = PLUGIN_ICON 					: End Property
+	Public Property Get PluginRemovable() 	: PluginRemovable = PLUGIN_REMOVABLE 		: End Property
+	Public Property Get PluginCredits() 	: PluginCredits = PLUGIN_CREDITS 			: End Property
+	Public Property Get PluginRoot() 		: PluginRoot = PLUGIN_ROOT 					: End Property
+	Public Property Get PluginFolderName() 	: PluginFolderName = PLUGIN_FOLDER_NAME 	: End Property
+	Public Property Get PluginDBTable() 	: PluginDBTable = IIf(Len(PLUGIN_DB_NAME)>2, "tbl_plugin_"&PLUGIN_DB_NAME, "") 	: End Property
 
-	Public Property Get PluginCode()
-		PluginCode = PLUGIN_CODE
-	End Property
-
-	Public Property Get PluginName()
-		PluginName = PLUGIN_NAME
-	End Property
-
-	Public Property Get PluginVersion()
-		PluginVersion = PLUGIN_VERSION
-	End Property
-	Public Property Get PluginGit()
-		PluginGit = PLUGIN_GIT
-	End Property
-	Public Property Get PluginDevURL()
-		PluginDevURL = PLUGIN_DEV_URL
-	End Property
 	Private Property Get This()
-		This = Array(PLUGIN_CODE, PLUGIN_NAME, PLUGIN_VERSION, PLUGIN_GIT, PLUGIN_DEV_URL, PLUGIN_FILES_ROOT)
-	End Property
-	Public Property Get PluginFolder()
-		PluginFolder = PLUGIN_FILES_ROOT
+		This = Array(PluginCode, PluginName, PluginVersion, PluginGit, PluginDevURL, PluginFolder, PluginIcon, PluginRemovable, PluginCredits, PluginRoot, PluginFolderName, PluginDBTable )
 	End Property
 	'---------------------------------------------------------------
 	' Plugin Defines
