@@ -227,7 +227,7 @@ Class bizimhesap_efatura_plugin
     	PLUGIN_DB_NAME 			= "bizimhesap"
     	PLUGIN_VERSION 			= "1.0.0"
     	PLUGIN_CREDITS 			= "@badursun Anthony Burak DURSUN"
-    	PLUGIN_GIT 				= "https://github.com/RabbitCMS-Hub/Amazon-S3-Plugin"
+    	PLUGIN_GIT 				= "https://github.com/RabbitCMS-Hub/bizimhesap-efatura-plugin"
     	PLUGIN_DEV_URL 			= "https://adjans.com.tr"
     	PLUGIN_FILES_ROOT 		= PLUGIN_VIRTUAL_FOLDER(This)
     	'-------------------------------------------------------------------------------------
