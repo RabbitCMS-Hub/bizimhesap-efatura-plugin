@@ -1,20 +1,23 @@
 <%
-'**********************************************
-'**********************************************
+'#########################################
 '               _ _                 
-'      /\      | (_)                
+'      /\      | (_)        1881 - ∞
 '     /  \   __| |_  __ _ _ __  ___ 
 '    / /\ \ / _` | |/ _` | '_ \/ __|
 '   / ____ \ (_| | | (_| | | | \__ \
 '  /_/    \_\__,_| |\__,_|_| |_|___/
-'               _/ | Digital Agency
+'  (c)2011      _/ | Digital Agency
 '              |__/ 
-' 
+'#########################################
 '* Project  : RabbitCMS
 '* Developer: <Anthony Burak DURSUN>
 '* E-Mail   : badursun@adjans.com.tr
 '* Corp     : https://adjans.com.tr
+'* Date     : 08.04.2023
+'#########################################
+
 '**********************************************
+' LAST UPDATE: 12.04.2023 10:20 @badursun
 ' LAST UPDATE: 28.10.2022 15:33 @badursun
 '**********************************************
 
@@ -225,7 +228,7 @@ Class bizimhesap_efatura_plugin
     	PLUGIN_NAME 			= "Bizim Hesap - E-Fatura Plugin"
     	PLUGIN_CODE 			= "BIZIM_HESAP_EFATURA"
     	PLUGIN_DB_NAME 			= "bizimhesap"
-    	PLUGIN_VERSION 			= "1.0.0"
+    	PLUGIN_VERSION 			= "1.0.1"
     	PLUGIN_CREDITS 			= "@badursun Anthony Burak DURSUN"
     	PLUGIN_GIT 				= "https://github.com/RabbitCMS-Hub/bizimhesap-efatura-plugin"
     	PLUGIN_DEV_URL 			= "https://adjans.com.tr"
